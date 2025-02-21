@@ -1,0 +1,40 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzQ4MDA5ODgsImV4cCI6MTc2NjM1ODU4OCwiYXVkIjoiNjc2NmY1M2MyOTJiMGIyN2Y0OTQwNDI4IiwiaXNzIjoiZG9tYWludXJsLmNvbSJ9.T6Heltn6TUfp45sE4TBmzjyfLtCu18owkFqeyrqTqu8
+
+###
+GET http://localhost:3000/home
+
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "johndoe@mail.com",
+    "password": "123456" 
+}
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "johndoe@mail.com",
+    "password": "123456" 
+}
+
+###
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mjk3ODg4MzcsImV4cCI6MTc2MTM0NjQzNywiYXVkIjoiNjcxOWY1YzdjZDM1Mjc2YjhjNTg3NjQwIiwiaXNzIjoiZG9tYWludXJsLmNvbSJ9.fgpD89mt0TBiYGsSwq-iE_8Ob7fDDSs6T-jMJx_j9kY"
+}
+
+###
+DELETE  http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mjk3ODk0MzEsImV4cCI6MTc2MTM0NzAzMSwiYXVkIjoiNjcxOWY1YzdjZDM1Mjc2YjhjNTg3NjQwIiwiaXNzIjoiZG9tYWludXJsLmNvbSJ9.6qWZ2Y1P2czobvXkOtkDEMNXi_4NiRbglCyZmnNVNPw"
+}
+
